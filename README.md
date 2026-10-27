@@ -18,6 +18,19 @@ except your records (best time, kills, wins) and your last picked character.
 - **Overheal → shield**: healing past max health becomes a blue shield that soaks up damage first and slowly fades.
 - **Status effects**: chilled enemies are slowed (blue tint); poisoned enemies take damage over time (green tint).
 
+## Play it
+
+**https://axellofgren-boop.github.io/rattlebones/**
+
+Open it in Safari on the iPhone → Share → **Add to Home Screen**. It then launches full-screen with its own
+icon and works offline; your computer doesn't need to be on.
+
+### How updates go live
+
+Every push to the `main` branch on GitHub runs `.github/workflows/deploy.yml`: it type-checks, builds and
+publishes the game to GitHub Pages (about a minute). The phone picks up the new version the next time the
+game is opened with an internet connection.
+
 ## Playing on your iPhone (while developing)
 
 1. On the PC, in this folder, run `npm run dev`.
@@ -25,13 +38,6 @@ except your records (best time, kills, wins) and your last picked character.
 3. In Safari on the iPhone, open the `Network` address the command prints
    (e.g. `http://192.168.0.186:5173`). If Windows asks about the firewall, allow access on private networks.
 4. Add `?fps` to the address to show a frame-rate counter.
-
-## Installing it like an app
-
-1. Run `npm run build`. The finished game is now in the `dist/` folder.
-2. Host it online (HTTPS). Easiest: go to <https://app.netlify.com/drop> and drag the `dist` folder onto the page.
-3. Open the address it gives you in Safari → Share → **Add to Home Screen**.
-   It launches full-screen with its own icon and works offline.
 
 ## Commands
 
